@@ -10,7 +10,7 @@ We propose to create an open object detection model for real-time marine vessel 
 
 These two phases will include the following related tasks:
 Build an open-access vessel image dataset using images from the M2 system and publish it under a Creative Commons license. 
-1. Create an open-access side-view vessel image dataset using images from the M2 system and publish it under a Creative Commons license. We classify marine vessels into 11 classes (as of 08/21/2023), including:
+1. Create an open-access side-view vessel image dataset using images from the M2 system and publish it under a Creative Commons license. The marine vessels are classified into 11 classes (as of 08/21/2023), including:
     - non-commercial small
     - non-commercial medium
     - non-commercial large
@@ -23,7 +23,15 @@ Build an open-access vessel image dataset using images from the M2 system and pu
     - other
     - unknown
    
-    Definitions on the classification of vessels could be found through [Vessel Classification Dictionary](https://docs.google.com/document/d/1Rdn4ziShCNLJWMKf9IGO9VMJalLB41HYNDbFCTLYYYc/edit).
+    We manually labeled a portion of the images, and during the labeling process we found that the amount of images was huge, but the quality varied. Some samples do not contain ships or are very blurry. On one hand, we would like the dataset to be of high quality: the outlines and colors of the vessels can be clearly seen, and the bounding box is larger than 50 pixels. On the other hand, we also wanted to include the most information about the actual scene, so we added three additional qualifiers to further describe each vessel class: distant/ blurry/backlit. The three most common causes of poor samples in the actual scene were listed as：
+   1. Distant. The vessel is too small or too far away. Result in bounding box to be smaller than 50 pixels.
+   2. Blurry. Blurring of the vessel's outline.
+   3. Backlit. Overexposure causes loss of the ship's color information.
+      
+    Using the qualifier, we categorized and incorporated some of the otherwise problematic samples into the dataset, which helped to increase the diversity of the dataset as well as balance the classes.
+   But despite this, we still face the problem of an unbalanced dataset. For this reason we intend to quickly filter the raw data of m2 and extract as many minority-class images as possible. We next intend to use the currently available dataset to train a model for     detecting the presence of vessels in the images, which will be used to filter the raw data in m2, reducing the time and effort of manual annotation.
+
+   Explicit definitions on the classification of vessels and usage of qualifier could be found through [Vessel Classification Dictionary](https://docs.google.com/document/d/1Rdn4ziShCNLJWMKf9IGO9VMJalLB41HYNDbFCTLYYYc/edit).
 2.  an automated real-time vessel object detection system.
 
 For task 1, the quality of the images is not required to be very high, but the outlines still need to be discernible. Since there is no open access dataset for vessels, our project extends to task 2: compile a high-quality dataset for vessels (we will continue to discuss whether it is open source or not). This dataset is a compilation and classification of the accumulated data from the M2 system and will be crucial for the future training of deep learning models for vessel detection and classification. We envision a dataset of 10,000 samples governed by a Creative Commons license, specifically the SA-BY license. Easy access and discovery of this training set will be accomplished by serving it as part of Orcasound’s open data registry within Amazon’s open data sponsored S3 bucket called the “Acoustic Sandbox” (for free under AWS open data sponsorship through 2024).
