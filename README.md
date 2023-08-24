@@ -10,7 +10,7 @@ We propose to create an open object detection model for real-time marine vessel 
 
 These two phases will include the following related tasks:
 Build an open-access vessel image dataset using images from the M2 system and publish it under a Creative Commons license. 
-1. Create an open-access side-view vessel image dataset using images from the M2 system and publish it under a Creative Commons license. The marine vessels are classified into 11 classes (as of 08/21/2023), including:
+1. Create an open-access side-view vessel image dataset using images from the M2 system located on the Orcasound Lab (here are some [images of M2 at Orcasound Lab](https://photos.app.goo.gl/axfEaEMb6aw9acto6))and publish it under a Creative Commons license. The marine vessels are classified into 11 classes (as of 08/21/2023), including:
     - non-commercial small
     - non-commercial medium
     - non-commercial large
@@ -29,17 +29,13 @@ Build an open-access vessel image dataset using images from the M2 system and pu
    3. Backlit. Overexposure causes loss of the ship's color information.
       
     Using the qualifier, we categorized and incorporated some of the otherwise problematic samples into the dataset, which helped to increase the diversity of the dataset as well as balance the classes.
-   But despite this, we still face the problem of an unbalanced dataset. For this reason we intend to quickly filter the raw data of m2 and extract as many minority-class images as possible. We next intend to use the currently available dataset to train a model for     detecting the presence of vessels in the images, which will be used to filter the raw data in m2, reducing the time and effort of manual annotation.
+   But despite this, we still face the problem of an unbalanced dataset. For this reason, we intend to quickly filter the raw data of m2 and extract as many minority-class images as possible. We next intend to use the currently available dataset to train a model for detecting the presence of vessels in the images, which will be used to filter the raw data in m2, reducing the time and effort of manual annotation.
 
-   Explicit definitions on the classification of vessels and usage of qualifier could be found through [Vessel Classification Dictionary](https://docs.google.com/document/d/1Rdn4ziShCNLJWMKf9IGO9VMJalLB41HYNDbFCTLYYYc/edit).
-2.  an automated real-time vessel object detection system.
+   Explicit definitions of the classification of vessels and usage of qualifiers can be found through [Vessel Classification Dictionary](https://docs.google.com/document/d/1Rdn4ziShCNLJWMKf9IGO9VMJalLB41HYNDbFCTLYYYc/edit).
 
-For task 1, the quality of the images is not required to be very high, but the outlines still need to be discernible. Since there is no open access dataset for vessels, our project extends to task 2: compile a high-quality dataset for vessels (we will continue to discuss whether it is open source or not). This dataset is a compilation and classification of the accumulated data from the M2 system and will be crucial for the future training of deep learning models for vessel detection and classification. We envision a dataset of 10,000 samples governed by a Creative Commons license, specifically the SA-BY license. Easy access and discovery of this training set will be accomplished by serving it as part of Orcasound’s open data registry within Amazon’s open data sponsored S3 bucket called the “Acoustic Sandbox” (for free under AWS open data sponsorship through 2024).
+2.  Create two automated real-time vessel object detection system. 
+   For task 1, the quality of the images is not required to be very high, but the outlines still need to be discernible. Since there is no open access dataset for vessels, our project extends to task 2: compile a high-quality dataset for vessels (we will continue to discuss whether it is open source or not). This dataset is a compilation and classification of the accumulated data from the M2 system and will be crucial for the future training of deep learning models for vessel detection and classification. We envision a dataset of 10,000 samples governed by a Creative Commons license, specifically the SA-BY license. Easy access and discovery of this training set will be accomplished by serving it as part of Orcasound’s open data registry within Amazon’s open data sponsored S3 bucket called the “Acoustic Sandbox” (for free under AWS open data sponsorship through 2024).
 Produce an open object detection model for real-time marine vessel monitoring. 
-
-The definition and details about each of these classes are provided in the vessel classification dictionary. 
-Data preparation: Build a fine-grained relatively small dataset for 11-way classification with 250 samples in each class. Currently, the vessel type information of the M2 system is required to be entered manually, and we would like to produce an open object detection model for real-time marine vessel monitoring. We initially identified five vessel types cargo ships, tugboats, speedboats, sailboats, and (cruise ships). (During the labeling process, there can be more than 5 categories, but they are generalized to 5 categories in the subsequent training). 
-Every vessel category contains 500 images each labeled with vessel type, bounding box, if loaded or not, AIS or non-AIS, etc.
 Retrain Yolo v5. First, we will try to transfer learning to the pre-trained Yolo model. Based on the result, we will decide whether to move on to the next task or train from scratch. Training from scratch would increase the training data to 10000 for each vessel type. 
 (the vessel type tags currently in the M2 system)
 The code used to process the data sets from the Roboflow annotation app, train the model, assess its performance, and possibly retrain the model will be shared via a public repository within the Orcasound Github organization under this particular permissive open-source software license: MIT.
@@ -64,8 +60,8 @@ https://m2marinemonitor.com/hardware-specifications/#package-2
 
 
 
-https://universe.roboflow.com/cuize/vesseldetection-dhmgv
-link to dictionary
+
+
 methodology: process of generating data, training 
 https://photos.app.goo.gl/axfEaEMb6aw9acto6
 adding license
