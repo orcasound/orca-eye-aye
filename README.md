@@ -9,10 +9,10 @@ Ongoing projects:
 
 _Author: Ze Cui, Samantha King, Scott Veirs, Val Veirs_  
     
-We propose to create an open object detection model for real-time marine vessel monitoring. This project will involve two phases and associated deliverables. First, we will collaborate with Protected Seas and Beam Reach to build a data set using the Roboflow annotation app. Then we will develop an object detection model, beginning with the approach of transfer learning and the pre-trained Yolo model.  
+We propose to create an open object detection model for real-time marine vessel monitoring. This project will involve two phases and associated deliverables. First, we will collaborate with Protected Seas and Beam Reach to build an 11-class side-view vessel data set using the Roboflow annotation app. Then, using this data set, we will develop a vessel detection model using the YOLO algorithm.  
 
 ### Phase 1. Generate a labeled data set    
-Create an open-access side-view vessel image dataset using images from the M2 system located on the Orcasound Lab (here are some [images of M2 at Orcasound Lab](https://photos.app.goo.gl/axfEaEMb6aw9acto6))and publish it under a Creative Commons license. The marine vessels are classified into 11 classes (as of 08/21/2023), including:
+Create an open-access side-view vessel image dataset using images from the M2 system located in the Orcasound Lab (here are some [images of M2 at Orcasound Lab](https://photos.app.goo.gl/axfEaEMb6aw9acto6))and publish it under a Creative Commons license. The marine vessels are classified into 11 classes (as of 08/21/2023), including:
     - non-commercial small
     - non-commercial medium
     - non-commercial large
