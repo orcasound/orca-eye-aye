@@ -9,7 +9,8 @@ Ongoing projects:
 
 _Author: Ze Cui, Samantha King, Scott Veirs, Val Veirs_  
     
-We propose to create an open object detection model for real-time marine vessel monitoring. This project will involve two phases and associated deliverables. First, we will collaborate with Protected Seas and Beam Reach to build an 11-class side-view vessel data set using the Roboflow annotation app. Then, using this data set, we will develop a vessel detection model using the YOLO algorithm.  
+We propose to create an open object detection model for real-time marine vessel monitoring. This project will involve two phases and associated deliverables. First, we will collaborate with [Protected Seas](protectedseas.net) and [Beam Reach](https://beamreach.blue/) to build an 11-class side-view vessel data set using the [Roboflow](Roboflow.com
+) annotation app. Then, using this data set, we will develop a vessel detection model using the YOLO algorithm.  
 
 ### Phase 1. Generate a labeled data set    
 Create an open-access side-view vessel image dataset using images from the M2 system located in the Orcasound Lab (here are some [images of M2 at Orcasound Lab](https://photos.app.goo.gl/axfEaEMb6aw9acto6))and publish it under a Creative Commons license. The marine vessels are classified into 11 classes (as of 08/21/2023), including:
@@ -24,8 +25,8 @@ Create an open-access side-view vessel image dataset using images from the M2 sy
     - commercial tug
     - other
     - unknown
-   We manually labeled a portion of the images, and during the labeling process we found that the amount of images was huge, but the quality varied. Some samples do not contain ships or are very blurry. On one hand, we would like the dataset to be of high quality: the outlines and colors of the vessels can be clearly seen, and the bounding box is larger than 50 pixels. On the other hand, we also wanted to include the most information about the actual scene, so we added three additional qualifiers to further describe each vessel class: distant/ blurry/backlit. The three most common causes of poor samples in the actual scene were listed as：
-   1. Distant. The vessel is too small or too far away. Result in bounding box to be smaller than 50 pixels.
+   We manually labeled a portion of the images, and during the labeling process we found that the amount of images was huge, but the quality varied. Some samples do not contain ships or are very blurry. On one hand, we would like the dataset to be of high quality: the outlines and colors of the vessels can be clearly seen, and the bounding box with a minimum dimension of at least 50 pixels. On the other hand, we also wanted to include the most information about the actual scene, so we added three additional qualifiers to further describe each vessel class: distant/ blurry/backlit. The three most common causes of poor samples in the actual scene were listed as：
+   1. Distant. The vessel is too small or too far away. Result in a bounding box with a dimension smaller than 50 pixels.
    2. Blurry. Blurring of the vessel's outline.
    3. Backlit. Overexposure causes loss of the ship's color information.
       Using the qualifier, we categorized and incorporated some of the otherwise problematic samples into the dataset, which helped to increase the diversity of the dataset as well as balance the classes.
@@ -52,7 +53,7 @@ The code used to process the data sets from the Roboflow annotation app, train t
 Publish the model along with the performance assessment. The model (version 1?) will be stored alongside the training data within the Acoustic Sandbox bucket or could be published online in another forum (e.g. Kaggle or Zenodo?). It will be shared under this particular type of machine learning license (link, e.g. to a license you and Tianyi choose with us via this discussion of ML licenses or this discussion of Responsible AI Licenses (RAILs).
 
 ### About Marine Monitor (M2)
-Marine Monitor (M2) is a shore-based, multi-sensor platform that integrates X-band marine radar, optical cameras, and other sensors with custom software to autonomously track and report on vessel activity in nearshore areas. By using radar, vessels of all types are tracked by the system, including smaller boats that are typically not required to participate in common tracking systems. M2 also receives and documents vessel information from the Automatic Identification System (AIS) which is primarily used by larger commercial vessels. The camera is dynamically directed to vessel locations, provided by both radar and AIS, throughout its trip, so that images are captured while vessels are within range of the M2 system. M2 was designed by ProtectedSeas as a tool for marine managers to more effectively monitor and document human activities in sensitive marine areas. 
+Marine Monitor (M2) is a shore-based, multi-sensor platform that integrates X-band marine radar, optical cameras, and other sensors with custom software to autonomously track and report on vessel activity in nearshore areas. By using radar, vessels of all types are tracked by the system, including smaller boats that are typically not required to participate in common tracking systems. M2 also receives and documents vessel information from the Automatic Identification System (AIS) which is primarily used by larger commercial vessels. The camera is dynamically directed to vessel locations, provided by both radar and AIS, throughout its transit, so that images are captured while vessels are within range of the M2 system. M2 was designed by ProtectedSeas as a tool for marine managers to more effectively monitor and document human activities in sensitive marine areas. 
 
 <p align = 'center'>
 <img src="https://github.com/orcasound/orca-eye-aye/assets/47680801/e67703cd-214b-4d88-8540-4274cc488125" width='300' length='300'>
