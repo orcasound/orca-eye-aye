@@ -13,7 +13,8 @@ We propose to create an open object detection model for real-time marine vessel 
 ) annotation app. Then, using this data set, we will develop a vessel detection model using the YOLO algorithm.  
 
 ### Phase 1. Generate a labeled data set    
-Create an open-access side-view vessel image dataset using images from the M2 system located in the Orcasound Lab (here are some [images of M2 at Orcasound Lab](https://photos.app.goo.gl/axfEaEMb6aw9acto6))and publish it under a Creative Commons license. The marine vessels are classified into 11 classes (as of 08/21/2023), including:
+Create an open-access side-view vessel image dataset using images from the M2 system located in the Orcasound Lab (here are some [images of M2 at Orcasound Lab](https://photos.app.goo.gl/axfEaEMb6aw9acto6))and publish it under a Creative Commons license. The marine vessels are classified into 11 classes (as of 08/21/2023), including:    
+
     - non-commercial small
     - non-commercial medium
     - non-commercial large
