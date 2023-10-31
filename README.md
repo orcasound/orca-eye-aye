@@ -59,6 +59,11 @@ Marine Monitor (M2) is a shore-based, multi-sensor platform that integrates X-ba
 <img src="https://github.com/orcasound/orca-eye-aye/assets/47680801/e67703cd-214b-4d88-8540-4274cc488125" width='300' length='300'>
 </p>
 
+### Acknowledgments
+
+I would like to extend my deepest gratitude to Scott Veris, Samantha King, and Val Veris for their invaluable mentorship throughout this project. Their insights and expertise have been instrumental in shaping both the direction and outcomes of this work. I extend my appreciation to them for defining the true spirit of dedication in academic research and practice.
+
+
 
 
 
