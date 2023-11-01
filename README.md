@@ -50,9 +50,15 @@ Open data archive could be accessed via e.g. --
 
 
 ### Phase 2: Train model with labeled data
-Create two automated real-time vessel object detection systems. One is for detecting the existence of vessels in the image and is also used as a filter for better-quality data, and the other is for vessel classification.  
+Create two automated real-time vessel object detection systems. One is for detecting the existence of vessels in the image and is also used as a filter for better-quality data, and the other is for vessel classification.    
 
-For detecting the existence of vessels, the quality of the training data is not required to be very high, but the outlines still need to be discernible. Since there is no open access dataset for vessels, our project extends to task 2: compile a high-quality dataset for vessels ( looking for a license for the dataset). This dataset is a compilation and classification of the accumulated data from the M2 system and will be crucial for the future training of deep learning models for vessel detection and classification.  
+
+
+
+For detecting the existence of vessels, the quality of the training data is not required to be very high, but the outlines still need to be discernible. Since there is no open access dataset for vessels, our project extends to task 2: compile a high-quality dataset for vessels ( looking for a license for the dataset). This dataset is a compilation and classification of the accumulated data from the M2 system and will be crucial for the future training of deep learning models for vessel detection and classification.    
+
+![Blank diagram (1)](https://github.com/orcasound/orca-eye-aye/assets/47680801/9682150b-9de8-4c5e-92e0-313ba7a0c3a5)
+
 
 Produce an open object detection model for real-time marine vessel monitoring. 
 Retrain Yolo v5. First, we will try to transfer learning to the pre-trained Yolo model. The code used to process the data sets from the Roboflow annotation app, train the model, assess its performance, and possibly retrain the model will be shared via a public repository within the Orcasound Github organization under this particular permissive open-source software license: MIT.
