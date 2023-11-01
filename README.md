@@ -34,7 +34,8 @@ Create an open-access side-view vessel image dataset using images from the M2 sy
    1. Distant. The vessel is too small or too far away. Result in a bounding box with a dimension smaller than 50 pixels.
    2. Blurry. Blurring of the vessel's outline.
    3. Backlit. Overexposure causes loss of the ship's color information.
-      Using the qualifier, we categorized and incorporated some of the otherwise problematic samples into the dataset, which helped to increase the diversity of the dataset as well as balance the classes.
+
+Using the qualifier, we categorized and incorporated some of the otherwise problematic samples into the dataset, which helped to increase the diversity of the dataset as well as balance the classes.
    But despite this, we still face the problem of an unbalanced dataset. For this reason, we intend to quickly filter the raw data of m2 and extract as many minority-class images as possible. We next intend to use the currently available dataset to train a model for detecting the presence of vessels in the images, which will be used to filter the raw data in m2, reducing the time and effort of manual annotation.
 
    Explicit definitions of the classification of vessels and usage of qualifiers can be found through [Vessel Classification Dictionary](https://docs.google.com/document/d/1Rdn4ziShCNLJWMKf9IGO9VMJalLB41HYNDbFCTLYYYc/edit).
