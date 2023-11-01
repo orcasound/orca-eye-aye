@@ -7,8 +7,10 @@ Ongoing projects:
 
 ## Real-Time Automated Vessel Detection System Using Side View Images
 
-_Author: Ze Cui, Samantha King, Scott Veirs, Val Veirs_  
-   
+_Author: Ze Cui, Samantha King, Scott Veirs, Val Veirs_   
+
+
+Here is an intro video to help you quickly go through the project!
 [![Watch the video](https://img.youtube.com/vi/uyin-k-F2fI/maxresdefault.jpg)](https://youtu.be/uyin-k-F2fI)
     
 We propose to create an open object detection model for real-time marine vessel monitoring. This project will involve two phases and associated deliverables. First, we will collaborate with [Protected Seas](protectedseas.net) and [Beam Reach](https://beamreach.blue/) to build an 11-class side-view vessel data set using the [Roboflow](Roboflow.com
