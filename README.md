@@ -8,8 +8,8 @@ Ongoing projects:
 ## Real-Time Automated Vessel Detection System Using Side View Images
 
 _Author: Ze Cui, Samantha King, Scott Veirs, Val Veirs_  
-
-[![Watch the video](https://github.com/orcasound/orca-eye-aye/assets/47680801/91838539-3954-4785-9bec-57cae6931e1a)](https://youtu.be/uyin-k-F2fI)
+   
+[![Watch the video](https://img.youtube.com/vi/uyin-k-F2fI/maxresdefault.jpg)](https://youtu.be/uyin-k-F2fI)
     
 We propose to create an open object detection model for real-time marine vessel monitoring. This project will involve two phases and associated deliverables. First, we will collaborate with [Protected Seas](protectedseas.net) and [Beam Reach](https://beamreach.blue/) to build an 11-class side-view vessel data set using the [Roboflow](Roboflow.com
 ) annotation app. Then, using this data set, we will develop a vessel detection model using the YOLO algorithm.  
