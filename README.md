@@ -1,4 +1,4 @@
-<img width="1147" alt="frontpage" src="https://github.com/orcasound/orca-eye-aye/assets/47680801/11ec2810-b101-48af-99b5-e7dd6abffc9a">
+<img width="1147" alt="frontpage" src="https://github.com/orcasound/orca-eye-aye/assets/47680801/11ec2810-b101-48af-99b5-e7dd6abffc9a">    
 
 # orca-eye-aye 👁
 _Here you can find all computer vision-related projects in Orcasound!_
@@ -8,12 +8,14 @@ Ongoing projects:
 ## Real-Time Automated Vessel Detection System Using Side View Images
 
 _Author: Ze Cui, Samantha King, Scott Veirs, Val Veirs_  
+
+[![Watch the video](https://github.com/orcasound/orca-eye-aye/assets/47680801/91838539-3954-4785-9bec-57cae6931e1a)](https://youtu.be/uyin-k-F2fI)
     
 We propose to create an open object detection model for real-time marine vessel monitoring. This project will involve two phases and associated deliverables. First, we will collaborate with [Protected Seas](protectedseas.net) and [Beam Reach](https://beamreach.blue/) to build an 11-class side-view vessel data set using the [Roboflow](Roboflow.com
 ) annotation app. Then, using this data set, we will develop a vessel detection model using the YOLO algorithm.  
 
 ### Phase 1. Generate a labeled data set    
-Create an open-access side-view vessel image dataset using images from the M2 system located in the Orcasound Lab (here are some [images of M2 at Orcasound Lab](https://photos.app.goo.gl/axfEaEMb6aw9acto6))and publish it under a Creative Commons license. The marine vessels are classified into 11 classes (as of 08/21/2023), including:    
+Create an open-access side-view vessel image dataset using images from the M2 system located in the Orcasound Lab (here are some [images of M2 at Orcasound Lab](https://photos.app.goo.gl/axfEaEMb6aw9acto6))and publish it under a Creative Commons license. We envision a dataset of 10,000 samples governed by [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en) license. Easy access and discovery of this training set will be accomplished by serving it as part of Orcasound’s open data registry within Amazon’s open data sponsored S3 bucket called the “Acoustic Sandbox”(for free under AWS open data sponsorship through 2024). The marine vessels are classified into 11 classes (as of 08/21/2023), including:    
 
     - non-commercial small
     - non-commercial medium
@@ -48,7 +50,7 @@ Open data archive could be accessed via e.g. --
 ### Phase 2: Train model with labeled data
 Create two automated real-time vessel object detection systems. One is for detecting the existence of vessels in the image and is also used as a filter for better-quality data, and the other is for vessel classification.  
 
-For detecting the existence of vessels, the quality of the training data is not required to be very high, but the outlines still need to be discernible. Since there is no open access dataset for vessels, our project extends to task 2: compile a high-quality dataset for vessels ( looking for a license for the dataset). This dataset is a compilation and classification of the accumulated data from the M2 system and will be crucial for the future training of deep learning models for vessel detection and classification. We envision a dataset of 10,000 samples governed by a Creative Commons license, specifically the SA-BY license. Easy access and discovery of this training set will be accomplished by serving it as part of Orcasound’s open data registry within Amazon’s open data sponsored S3 bucket called the “Acoustic Sandbox”(for free under AWS open data sponsorship through 2024).    
+For detecting the existence of vessels, the quality of the training data is not required to be very high, but the outlines still need to be discernible. Since there is no open access dataset for vessels, our project extends to task 2: compile a high-quality dataset for vessels ( looking for a license for the dataset). This dataset is a compilation and classification of the accumulated data from the M2 system and will be crucial for the future training of deep learning models for vessel detection and classification.  
 
 Produce an open object detection model for real-time marine vessel monitoring. 
 Retrain Yolo v5. First, we will try to transfer learning to the pre-trained Yolo model. The code used to process the data sets from the Roboflow annotation app, train the model, assess its performance, and possibly retrain the model will be shared via a public repository within the Orcasound Github organization under this particular permissive open-source software license: MIT.
