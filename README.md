@@ -8,7 +8,7 @@ _Hi there! This repository serves as a hub for the development of all visual ana
 _Author: Ze Cui, Samantha King, Scott Veirs, Val Veirs_   
 
 
-In the presentation below, I outlined the project's motivation, objectives, and methodology, discussed the dataset we developed, and showcased results from a deep learning model trained on this dataset:
+In the presentation below, I outlined the project's motivation, objectives, and methodology, discussed the dataset we developed, and showcased results from a deep learning model trained on this dataset. Finally, I extend the discussion about the current problems.:
 [![Watch the video](https://img.youtube.com/vi/uyin-k-F2fI/maxresdefault.jpg)](https://youtu.be/uyin-k-F2fI)
     
 We propose to create an open object detection model for real-time marine vessel monitoring. This project will involve two phases and associated deliverables. First, we will collaborate with [Protected Seas](https://protectedseas.net) and [Beam Reach](https://beamreach.blue/) to build an 11-class side-view vessel data set using the [Roboflow](Roboflow.com
