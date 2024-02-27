@@ -1,7 +1,7 @@
 <img width="1147" alt="frontpage" src="https://github.com/orcasound/orca-eye-aye/assets/47680801/11ec2810-b101-48af-99b5-e7dd6abffc9a">    
 
 # orca-eye-aye 👁
-_Here you can find all computer vision-related projects in Orcasound!_
+_Hi there! This repository serves as a hub for the development of all visual analytics projects, as well as the dissemination of our open-access dataset featuring side-view images of vessels.
 Ongoing projects:  
 - Real-Time Automated Vessel Detection System Using Side View Images
 
