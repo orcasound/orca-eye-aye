@@ -42,7 +42,9 @@ Using the qualifier, we categorized and incorporated some of the otherwise probl
 
 ### Most Recent Added Dataset
 - added on Jul/13/23: **_vesselDetection_071023_**   
-    note: This dataset includes data from July and October 2022. Includes 2641 vessel images across all classes.
+    note: This dataset includes data from July and October 2022. Includes 3495 images across all classes. Here's a health check of all classes:
+  ![Screen Shot 2024-02-23 at 1 38 21 PM](https://github.com/orcasound/orca-eye-aye/assets/47680801/83c34704-da70-484c-89b8-61eddfc54f4f)
+
 
     All datasets are located in Orcasound's S3 bucket: `s3://visual-sandbox/orca-eye-aye/data/`  
 Open data archive could be accessed via e.g. --
