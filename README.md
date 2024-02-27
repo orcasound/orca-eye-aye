@@ -6,6 +6,7 @@ _Hi there! This repository serves as a hub for the development of all visual ana
 ## Real-Time Automated Vessel Detection System Using Side View Images
 
 _Author: Ze Cui, Samantha King, Scott Veirs, Val Veirs_   
+_If you have any questions, feel free to contact me via E-mail: cuize88@gmail.com_
 
 
 In the presentation below, I outlined the project's motivation, objectives, and methodology, discussed the dataset we developed, and showcased results from a deep learning model trained on this dataset. Finally, I extend the discussion about the current problems.:
