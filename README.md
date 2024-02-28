@@ -44,10 +44,17 @@ Using the qualifier, we categorized and incorporated some of the otherwise probl
     note: This dataset includes data from July and October 2022. Includes 3495 images across all classes. Here's a health check of all classes:
   ![Screen Shot 2024-02-23 at 1 38 21 PM](https://github.com/orcasound/orca-eye-aye/assets/47680801/83c34704-da70-484c-89b8-61eddfc54f4f)
 
-
+    Within the 'visual-sandbox/orca-eye-aye/' directory, there are three folders:
+    - The Data folder stores our labeled dataset.
+    - The Model folder stores our most recent model.
+    - The Results folder presents our inferences based on data from the Orcasound lab.
+### How to get Dataset
+- Option 1: via AWS S3 bucket  
     All datasets are located in Orcasound's S3 bucket: `s3://visual-sandbox/orca-eye-aye/data/`  
 Open data archive could be accessed via e.g. --
-`aws --no-sign-request s3 sync s3://visual-sandbox/orca-eye-aye/ .`
+`aws --no-sign-request s3 sync s3://visual-sandbox/orca-eye-aye/`.  
+- Option 2: via Roboflow Universe  
+  At Roboflow Universe, you can access our entire collection of labeled datasets, including ongoing projects, here: https://universe.roboflow.com/cuize/
 
 
 
