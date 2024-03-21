@@ -24,6 +24,10 @@ Through my internship, I proposed to create an open object detection model for r
 
 Leveraging the image archive from the Marine Monitor (M2) system located at the Orcasound Lab, our inital goal was to publish an open labeled dataset with thousands of images under a Creative Commons license. For context, here is the M2 vessel tracking system mounted in a madrona tree at the Orcasound Lab:
 
+<p align = 'center'>
+<img src="https://github.com/orcasound/orca-eye-aye/assets/14044595/6d925c88-6d04-4b64-974f-14b4de08e68b" width='300' length='300'>
+</p>
+
 M2 uses radar and AIS to aim a pan-tilt-zoom camera at passing vessels and photograph them (primarily acquiring side-view images). You can explore more [images of the Marine Monitor deployment at Orcasound Lab](https://photos.app.goo.gl/axfEaEMb6aw9acto6). An example vessel image from the system with box bounding a labled object is shown at the top of this README.
 
 Our long-term goal is a dataset of 10,000 samples governed by a [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en) license. Easy access and discovery of this training set is accomplished by serving it as part of Orcasound’s open data buckets (via Amazon's S3 service), specifically the “Visual Sandbox” (funded by Beam Reach). The marine vessels are classified into 11 classes (as of release 1):    
