@@ -1,16 +1,22 @@
 <img width="1147" alt="frontpage" src="https://github.com/orcasound/orca-eye-aye/assets/47680801/11ec2810-b101-48af-99b5-e7dd6abffc9a">    
 
 # orca-eye-aye 👁
-_Hi there!_ This repository serves as a hub for the development of visual analysis projects undertaken by the [Orcasound open source community](https://github.com/orcasound), as well as the dissemination of our open-access dataset featuring side-view images of vessels (boats and ships). Our main project documented here is the development of a Real-Time Automated Vessel Detection System Using Side View Images. The goal of the system is to help identify sources of underwater noise monitored through the [Orcasound hydrophone network](https://orcasound.net), especially boats that do not broadcast their identity via the Automated Identification System (AIS) as ships are required to do. For historical context on this effort to study vessel impacts on the endangered Southern Resident killer whales in Washington State (USA), see Orcasound's [Salish Sea vessel research page](https://www.orcasound.net/portfolio/salish-sea-vessel-research/). 
+_Hi there!_ This repository serves as a hub for the development of visual analysis projects undertaken by the [Orcasound open source community](https://github.com/orcasound), as well as the dissemination of our open-access dataset featuring side-view images of vessels (boats and ships). Our main project documented here is the development of a Real-Time Automated Vessel Detection System Using Side View Images. 
+
+The goal of the vessel detection system is to help identify sources of underwater noise monitored through the [Orcasound hydrophone network](https://orcasound.net), especially boats that do not broadcast their identity via the Automated Identification System (AIS) that is only required for ships. For historical context on this effort to study vessel impacts on the endangered Southern Resident killer whales in Washington State (USA), pleae see Orcasound's [Salish Sea vessel research page](https://www.orcasound.net/portfolio/salish-sea-vessel-research/). 
 
 ## Real-Time Automated Vessel Detection System Using Side View Images
 
-_Release 1.0: 31 March 2024
+_Release 1.0: 31 March 2024_
+
 _Authors: Ze Cui (mentored by Samantha King, Scott Veirs, and Val Veirs)_   
+
 _If you have any questions, feel free to contact me via E-mail: cuize88@gmail.com_
 
+_Attibution: please cite "Ze Cui, Samantha King, Scott Veirs, and Val Veirs (2024), Orca Eye Aye vessel detection system." and link back to this public repository_
 
-In the video below of a presentation made to Protected Seas staff in fall 2023, I outline the project's motivation, objectives, and methodology. I discuss the open labeled dataset we developed and preliminary results from a deep learning model trained on the dataset. Finally, I talk about the challenges we faced in the final phase of the project:
+
+For a quick introduction to the project, watch the video below of a presentation I made to Protected Seas staff in fall 2023. In it, I outline the our motivations, objectives, and methodology. I discuss the open labeled dataset we developed and preliminary results from a deep learning model trained on the dataset. Finally, I talk about the challenges we faced in the final phase of the project (prior to the first release).
 
 [![Watch the video](https://img.youtube.com/vi/uyin-k-F2fI/maxresdefault.jpg)](https://youtu.be/uyin-k-F2fI)
 
@@ -18,11 +24,13 @@ In the video below of a presentation made to Protected Seas staff in fall 2023, 
     
 Through my internship, I proposed to create an open object detection model for real time vessel monitoring in the marine environment. My project involved two phases, both leveraging an archive of about half a million unlabeled side-view vessel images from a [Marine Monitor (M2) radar-camera system](https://m2marinemonitor.com/) ([more info about M2](#). First, I collaborated with [Protected Seas](https://protectedseas.net) and [Beam Reach](https://beamreach.blue/) to build an 11-class side-view vessel data set using the [Roboflow](Roboflow.com) annotation app. Second, using the labeled data set, we developed an initial vessel detection model using the YOLO algorithm.  
 
-### Phase 1. Generate an open-access labeled data set of side-view vessel images from the Marine Monitor (M2) system located at the Orcasound Lab and publish it under a Creative Commons license. For context, here is the M2 vessel tracking system mounted in a madrona tree at the Orcasound Lab:
+### Phase 1. Generate an open-access labeled dataset of side-view vessel images
 
-It uses radar and AIS to aim a pan-tilt-zoom camera at passing vessels and photograph them (primarily acquiring side-view images). You can explore more [images of the Marine Monitor deployment at Orcasound Lab](https://photos.app.goo.gl/axfEaEMb6aw9acto6). An example vessel image from the system is shown at the top of this README.
+Leveraging the image archive from the Marine Monitor (M2) system located at the Orcasound Lab, our inital goal was to publish an open labeled dataset with thousands of images under a Creative Commons license. For context, here is the M2 vessel tracking system mounted in a madrona tree at the Orcasound Lab:
 
-Our long-term goal is a dataset of 10,000 samples governed by [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en) license. Easy access and discovery of this training set is accomplished by serving it as part of Orcasound’s open data buckes (via Amazon's S3 service), specifically the “Visual Sandbox”(funded by Beam Reach). The marine vessels are classified into 11 classes (as of release 1):    
+M2 uses radar and AIS to aim a pan-tilt-zoom camera at passing vessels and photograph them (primarily acquiring side-view images). You can explore more [images of the Marine Monitor deployment at Orcasound Lab](https://photos.app.goo.gl/axfEaEMb6aw9acto6). An example vessel image from the system with box bounding a labled object is shown at the top of this README.
+
+Our long-term goal is a dataset of 10,000 samples governed by a [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en) license. Easy access and discovery of this training set is accomplished by serving it as part of Orcasound’s open data buckets (via Amazon's S3 service), specifically the “Visual Sandbox” (funded by Beam Reach). The marine vessels are classified into 11 classes (as of release 1):    
 
     - non-commercial small
     - non-commercial medium
@@ -57,7 +65,7 @@ This dataset includes 3495 images from July and October 2022 containing vessels 
 
 ### Phase 2: Train models with the labeled data
 
-For the initial release, we created two automated real-time vessel object detection systems. The first is for detecting vessels in the image. The second is for vessel classification.    
+For the initial release, we created two automated real-time vessel object detection systems. The first is for detecting vessels in the image. The second is for vessel classification.
 
 For detecting the existence of vessels, the quality of the training data is not required to be very high, but the outlines still need to be discernible. 
 
@@ -103,7 +111,3 @@ We took an iterative approach to developing our models using archived data, but 
 ### Acknowledgments
 
 I would like to extend my deepest gratitude to Scott Veirs, Samantha King, and Val Veirs for their invaluable mentorship throughout this project. Their insights and expertise have been instrumental in shaping both the direction and outcomes of this work. I extend my appreciation to them for defining the true spirit of dedication in academic research and practice. _-- Ze Cui_
-
-
-methodology: process of generating data, training 
-adding license
