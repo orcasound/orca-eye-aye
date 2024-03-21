@@ -7,14 +7,10 @@ The goal of the vessel detection system is to help identify sources of underwate
 
 ## Real-Time Automated Vessel Detection System Using Side View Images
 
-_Release 1.0: 31 March 2024_
-
-_Authors: Ze Cui (mentored by Samantha King, Scott Veirs, and Val Veirs)_   
-
-_If you have any questions, feel free to contact me via E-mail: cuize88@gmail.com_
-
-_Attibution: please cite "Ze Cui, Samantha King, Scott Veirs, and Val Veirs (2024), Orca Eye Aye vessel detection system." and link back to this public repository_
-
+- _Release 1.0: 31 March 2024_
+- _Authors: Ze Cui (mentored by Samantha King, Scott Veirs, and Val Veirs)_   
+- _If you have any questions, feel free to contact me via E-mail: cuize88@gmail.com_
+- _*Attibution:* Please cite "Ze Cui, Samantha King, Scott Veirs, and Val Veirs (2024), Orca Eye Aye vessel detection system, release 1.0" and link back to this public repository_
 
 For a quick introduction to the project, watch the video below of a presentation I made to Protected Seas staff in fall 2023. In it, I outline the our motivations, objectives, and methodology. I discuss the open labeled dataset we developed and preliminary results from a deep learning model trained on the dataset. Finally, I talk about the challenges we faced in the final phase of the project (prior to the first release).
 
@@ -32,17 +28,17 @@ M2 uses radar and AIS to aim a pan-tilt-zoom camera at passing vessels and photo
 
 Our long-term goal is a dataset of 10,000 samples governed by a [CC BY-SA 4.0](https://creativecommons.org/licenses/by-sa/4.0/legalcode.en) license. Easy access and discovery of this training set is accomplished by serving it as part of Orcasound’s open data buckets (via Amazon's S3 service), specifically the “Visual Sandbox” (funded by Beam Reach). The marine vessels are classified into 11 classes (as of release 1):    
 
-    - non-commercial small
-    - non-commercial medium
-    - non-commercial large
-    - non-commercial sailing
-    - commercial small
-    - commercial large fishing
-    - commercial large passenger
-    - commercial cargo
-    - commercial tug
-    - other
-    - unknown
+    1. non-commercial small
+    2. non-commercial medium
+    3. non-commercial large
+    4. non-commercial sailing
+    5. commercial small
+    6. commercial large fishing
+    7. commercial large passenger
+    8. commercial cargo
+    9. commercial tug
+    10. other
+    11. unknown
 
 We began by manually labeling a subsample of the M2 images (a few days from different seasons). During the labeling process we found that the amount of images was huge, but the quality varied with some images containing no ships or very blurry ones. On one hand, we would like each image to be of high quality (i.e. with outlines and colors of the vessels clearly visible) and the bounding box for each vessel annotation to have a minimum dimension of at least 50 pixels. On the other hand, we also wanted to include the as much information as possible about the actual scene (e.g. to train models on more challenging suites of images), so we added three additional qualifiers to further describe each vessel class when necessary: distant, blurry, and backlit. We defined these categories as：
 
@@ -67,11 +63,10 @@ This dataset includes 3495 images from July and October 2022 containing vessels 
 
 For the initial release, we created two automated real-time vessel object detection systems. The first is for detecting vessels in the image. The second is for vessel classification.
 
-For detecting the existence of vessels, the quality of the training data is not required to be very high, but the outlines still need to be discernible. 
 
 ![Blank diagram (1)](https://github.com/orcasound/orca-eye-aye/assets/47680801/9682150b-9de8-4c5e-92e0-313ba7a0c3a5)
 
-We used transfer learning with pre-trained Yolo5-Yolo8 models. The code used to process the labled data sets from the Roboflow annotation app, train the model, and assess its performance is shared via [the VesselDetection_train iPython notebook](VesselDetection_train.ipynb) in this reposistory under the MIT software license.
+We used transfer learning with pre-trained Yolo5-Yolo8 models. For detecting the existence of vessels, the quality of the training data is not required to be very high, but the outlines still need to be discernible. The code used to process the labled data sets from the Roboflow annotation app, train the model, and assess its performance is shared via [the VesselDetection_train iPython notebook](VesselDetection_train.ipynb) in this reposistory under the MIT software license.
  
 The model is stored alongside the training data within the Visual Sandbox bucket and is freely shared under a Responsible AI Licence (RAIL). The [Orca Aye Eye RAIL](Orca-Eye-Aye-RAIL.md) was customized from boilerplate acquired via the [Responsible AI license generator](https://www.licenses.ai/rail-license-generator). 
 
