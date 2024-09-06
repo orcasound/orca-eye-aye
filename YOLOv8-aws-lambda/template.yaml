@@ -1,0 +1,31 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  yolov8-inference
+
+Resources:
+  YOLOV8Function:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: lambda-codebase/
+      Handler: app.main
+      Runtime: python3.9
+      MemorySize: 3008
+      Timeout: 60
+      FunctionUrlConfig:
+        AuthType: NONE
+      Environment:
+        Variables:
+          RESULT_BUCKET_NAME: "visual-sandbox/orca-eye-aye/live-result"
+
+      Policies:
+        - S3ReadPolicy:
+            BucketName: visual-sandbox
+        - S3WritePolicy:
+            BucketName: visual-sandbox
+
+Outputs:
+  YOLOV8FunctionUrlEndpoint:
+    Description: "URL Endpoint"
+    Value:
+      Fn::GetAtt: YOLOV8FunctionUrl.FunctionUrl

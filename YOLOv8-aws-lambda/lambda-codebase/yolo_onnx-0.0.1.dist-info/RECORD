@@ -1,0 +1,12 @@
+yolo_onnx-0.0.1.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+yolo_onnx-0.0.1.dist-info/LICENSE,sha256=OA8yMOWJoxmD0cpPo2mzjDHag7Y8Iyo33H5VTWs5VVU,1066
+yolo_onnx-0.0.1.dist-info/METADATA,sha256=y3X0QcvlO2mx9tCjK9ZoqikaSlcEXPjZUNULC5vabEQ,1422
+yolo_onnx-0.0.1.dist-info/RECORD,,
+yolo_onnx-0.0.1.dist-info/REQUESTED,sha256=47DEQpj8HBSa-_TImW-5JCeuQeRkm5NMpJWZG3hSuFU,0
+yolo_onnx-0.0.1.dist-info/WHEEL,sha256=oiQVh_5PnQM0E3gPdiz09WCNmwiHDMaGer_elqB3coM,92
+yolo_onnx-0.0.1.dist-info/direct_url.json,sha256=qD1P83yW94T2QWYsmvRsiPEVTOzaTh1uTGfPlVEWi8Q,138
+yolo_onnx-0.0.1.dist-info/top_level.txt,sha256=1WZrnK0-gGX1nTmDJYHq5PaSg7zs5cwgT9VMOl86K7I,10
+yolo_onnx/__pycache__/utils.cpython-39.pyc,,
+yolo_onnx/__pycache__/yolov8_onnx.cpython-39.pyc,,
+yolo_onnx/utils.py,sha256=DZAYqxJemB1lu7_TJnWfcz59H-JqSyqUaxxAWJGML8E,4715
+yolo_onnx/yolov8_onnx.py,sha256=jDLwVUNxowaWgHLLPv8d8L0Fz9RCx1DfFu3NsXwwbyY,2103
