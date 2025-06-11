@@ -18,7 +18,7 @@ For a quick introduction to the project, watch the video below of a presentation
 
 ## Methodology
     
-Through my internship, I proposed to create an open object detection model for real-time vessel monitoring in the marine environment. My project involved two phases, both leveraging an archive of about half a million unlabeled side-view vessel images from a [Marine Monitor (M2) radar-camera system](https://m2marinemonitor.com/) ([more info about M2](#m2)). First, I collaborated with [Protected Seas](https://protectedseas.net) and [Beam Reach](https://beamreach.blue/) to build an 11-class side-view vessel data set using the [Roboflow](Roboflow.com) annotation app. Second, using the labeled data set, we developed an initial vessel detection model using the YOLO algorithm.  
+Through my internship, I proposed to create an open object detection model for real-time vessel monitoring in the marine environment. My project involved two phases, both leveraging an archive of about half a million unlabeled side-view vessel images from a [Marine Monitor (M2) radar-camera system](https://m2marinemonitor.com/) ([more info about M2](https://github.com/orcasound/orca-eye-aye/blob/main/README.md#more-about-marine-monitor-m2)). First, I collaborated with [Protected Seas](https://protectedseas.net) and [Beam Reach](https://beamreach.blue/) to build an 11-class side-view vessel data set using the [Roboflow](Roboflow.com) annotation app. Second, using the labeled data set, we developed an initial vessel detection model using the YOLO algorithm.  
 
 ### Phase 1. Generate an open-access labeled dataset of side-view vessel images
 
@@ -99,7 +99,7 @@ You have two options for assessing the data products stored beyond this reposito
 
 We took an iterative approach to developing our models using archived data, but we intend to deploy an open object detection model for marine vessel monitoring in real time. Eventually we hope to associate peaks in real-time noise metrics with the class, track, and speed of any passing vessel (AIS or non-AIS).
 
-## <a name="m2"></a> More about Marine Monitor (M2)
+## More about Marine Monitor (M2)
 
 [Marine Monitor (M2)](https://m2marinemonitor.com/) is a shore-based, multi-sensor platform that integrates X-band marine radar, optical cameras, and other sensors with custom software to autonomously track and report on vessel activity in nearshore areas. By using radar, vessels of all types are tracked by the system, including smaller boats that are typically not required to participate in common tracking systems. M2 also receives and documents vessel information from the Automatic Identification System (AIS) which is primarily used by larger commercial vessels. The camera is dynamically directed to vessel locations, provided by both radar and AIS, throughout its transit, so that images are captured while vessels are within range of the M2 system. M2 was designed by ProtectedSeas as a tool for marine managers to more effectively monitor and document human activities in sensitive marine areas. 
 
