@@ -18,7 +18,7 @@ For a quick introduction to the project, watch the video below of a presentation
 
 ## Methodology
     
-Through my internship, I proposed to create an open object detection model for real-time vessel monitoring in the marine environment. My project involved two phases, both leveraging an archive of about half a million unlabeled side-view vessel images from a [Marine Monitor (M2) radar-camera system](https://m2marinemonitor.com/) ([more info about M2](https://github.com/orcasound/orca-eye-aye/blob/main/README.md#more-about-marine-monitor-m2)). First, I collaborated with [Protected Seas](https://protectedseas.net) and [Beam Reach](https://beamreach.blue/) to build an 11-class side-view vessel data set using the [Roboflow](Roboflow.com) annotation app. Second, using the labeled data set, we developed an initial vessel detection model using the YOLO algorithm.  
+Through my internship, I proposed to create an open object detection model for real-time vessel monitoring in the marine environment. My project involved two phases, both leveraging an archive of about half a million unlabeled side-view vessel images from a [Marine Monitor (M2) radar-camera system](https://m2marinemonitor.com/) ([more info about M2](https://github.com/orcasound/orca-eye-aye/blob/main/README.md#more-about-marine-monitor-m2)). First, I collaborated with [Protected Seas](https://protectedseas.net) and [Beam Reach](https://beamreach.blue/) to build an 11-class side-view vessel data set using the [Roboflow](https://roboflow.com/) annotation app. Second, using the labeled data set, we developed an initial vessel detection model using the YOLO algorithm.  
 
 ### Phase 1. Generate an open-access labeled dataset of side-view vessel images
 
